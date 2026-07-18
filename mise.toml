@@ -1,0 +1,19 @@
+[tools]
+python = "3.12"
+uv = "latest"
+
+[tasks.install]
+description = "Install Python dependencies"
+run = "uv sync"
+
+[tasks.serve]
+description = "Preview the docs at http://localhost:8000 with live reload"
+run = "uv run zensical serve"
+
+[tasks.build]
+description = "Build the static site into ./site"
+run = "uv run zensical build --clean"
+
+[tasks.image-build]
+description = "Build the production container image"
+run = "docker build -t harbor.internal.minhdq.dev/minhdqdev/todopro-public-docs:$(cat VERSION) ."

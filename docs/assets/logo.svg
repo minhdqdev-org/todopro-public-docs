@@ -1,0 +1,18 @@
+<svg viewBox="0 0 790 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tp-word" x1="200" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#757cf2"/>
+      <stop offset="1" stop-color="#5ae4bb"/>
+    </linearGradient>
+  </defs>
+  <svg x="14" y="26" width="148" height="148" viewBox="49 51 418 418" overflow="visible">
+    <g fill="none" stroke="#757cf2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M138 114 L90 114 L90 282" stroke-width="24"/>
+      <path d="M378 114 L426 114 L426 405 L378 405" stroke-width="24"/>
+      <path d="M203 268 L245 306 L330 206" stroke-width="44"/>
+      <path d="M94 337 L122 369 L94 402" stroke-width="30"/>
+      <path d="M153 405 L201 405" stroke-width="24"/>
+    </g>
+  </svg>
+  <text x="200" y="143" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,-apple-system,sans-serif" font-size="132" font-weight="700" letter-spacing="-3" fill="url(#tp-word)">TodoPro</text>
+</svg>

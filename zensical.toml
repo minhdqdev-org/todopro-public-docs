@@ -1,0 +1,157 @@
+[project]
+site_name = "TodoPro Help"
+site_url = "https://docs.todopro.xyz/"
+site_description = "Guides, tips, and answers for getting the most out of TodoPro across web, mobile, and the command line."
+site_author = "TodoPro"
+copyright = "Copyright &copy; TodoPro"
+
+docs_dir = "docs"
+site_dir = "site"
+use_directory_urls = true
+
+# Explicit nav — auto-discovery would order these alphabetically, which puts
+# "Account" before "Getting started". Add new pages here.
+nav = [
+  {"Home" = "index.md"},
+  {"Getting started" = [
+    "getting-started/index.md",
+    "getting-started/create-account.md",
+    "getting-started/first-task.md",
+    "getting-started/quick-add-syntax.md",
+  ]},
+  {"Tasks" = [
+    "tasks/index.md",
+    "tasks/creating-tasks.md",
+    "tasks/due-dates-and-deadlines.md",
+    "tasks/priorities.md",
+    "tasks/recurring-tasks.md",
+    "tasks/reminders.md",
+    "tasks/subtasks-and-dependencies.md",
+    "tasks/labels-and-filters.md",
+  ]},
+  {"Projects" = [
+    "projects/index.md",
+    "projects/projects-and-sections.md",
+    "projects/views-and-layouts.md",
+    "projects/sharing-and-collaboration.md",
+    "projects/templates.md",
+  ]},
+  {"Productivity" = [
+    "productivity/index.md",
+    "productivity/today-and-upcoming.md",
+    "productivity/focus-and-pomodoro.md",
+    "productivity/reporting-and-analytics.md",
+  ]},
+  {"Apps" = [
+    "apps/index.md",
+    "apps/web.md",
+    "apps/mobile.md",
+    "apps/cli.md",
+  ]},
+  {"Integrations" = [
+    "integrations/index.md",
+    "integrations/github-projects.md",
+    "integrations/calendar.md",
+  ]},
+  {"TodoPro Pro" = ["pro/index.md"]},
+  {"Account" = [
+    "account/index.md",
+    "account/security.md",
+    "account/import-export.md",
+  ]},
+  {"FAQ" = "faq.md"},
+  {"Troubleshooting" = "troubleshooting.md"},
+]
+
+# ── Theme ─────────────────────────────────────────────────────────────────────
+
+[project.theme]
+variant = "classic"
+logo = "assets/logo.svg"
+favicon = "assets/favicon.svg"
+features = [
+  "navigation.instant",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.indexes",
+  "navigation.footer",
+  "search.suggest",
+  "search.highlight",
+  "search.share",
+  "content.code.copy",
+  "content.tabs.link",
+  "content.tooltips",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to light mode"
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+# ── Extra ─────────────────────────────────────────────────────────────────────
+
+[[project.extra.social]]
+icon = "fontawesome/solid/globe"
+link = "https://todopro.xyz"
+name = "TodoPro website"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/rocket"
+link = "https://app.todopro.xyz"
+name = "Open the app"
+
+# ── Markdown extensions ───────────────────────────────────────────────────────
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions."pymdownx.details"]
+[project.markdown_extensions."pymdownx.highlight"]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions."pymdownx.inlinehilite"]
+[project.markdown_extensions."pymdownx.snippets"]
+[project.markdown_extensions."pymdownx.smartsymbols"]
+
+[project.markdown_extensions."pymdownx.tabbed"]
+alternate_style = true
+
+[project.markdown_extensions."pymdownx.tasklist"]
+custom_checkbox = true
+
+[project.markdown_extensions."toc"]
+permalink = true
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  {name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format"},
+]
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
