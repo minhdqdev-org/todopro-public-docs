@@ -32,11 +32,14 @@ uv run zensical serve
 
 ## Publishing
 
-Pushing to `main` triggers `.github/workflows/ci-prod.yml`, which builds the image and pushes it to
-Harbor as `minhdqdev/todopro-public-docs:<VERSION>` and `:latest`.
+Pushing to `main` runs the org-wide reusable workflow
+(`minhdqdev-org/github-actions-workflows/.github/workflows/ci.yml`), which builds the image and
+pushes it to Harbor as `minhdqdev/todopro-public-docs:<version>` and `:latest`.
 ArgoCD Image Updater watches the `latest` digest and rolls out the new revision automatically.
 
-**Bump `VERSION` on every change to `main`** so each release gets a distinct immutable tag.
+The version comes from `[project] version` in `pyproject.toml` — that is what the shared workflow
+reads. **Bump it on every change to `main`** so each release gets a distinct immutable tag; if it
+is ever missing the workflow silently falls back to a short commit SHA.
 
 ## Writing guidelines
 
