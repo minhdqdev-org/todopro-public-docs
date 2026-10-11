@@ -1,0 +1,9 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  pr-check:
+    uses: minhdqdev-org/github-actions-workflows/.github/workflows/pr-check.yml@main
